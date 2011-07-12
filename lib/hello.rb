@@ -2,6 +2,7 @@ class Hello
   def initialize
     @output_console = $stdout
     @input_console = $stdin
+<<<<<<< HEAD
     @name = {}
     @name_keys = []
     @full_name = ""
@@ -34,3 +35,24 @@ class Hello
     end
   end
 end
+=======
+  end
+
+  attr_reader :name
+  attr_accessor :input_console, :output_console
+
+  # DRY = "don't repeat yourself"
+
+  def prompt
+    @output_console.puts "What's your name?"
+  end
+
+  def prompt_read
+    @name = @input_console.gets.chomp
+  end
+
+  def hello
+    @output_console.puts "Hi, #{@name}!"
+  end
+end
+>>>>>>> 9db31b2fe07bb3a1942625a9da9997f6e58827c4

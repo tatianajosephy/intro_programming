@@ -1,6 +1,7 @@
 #! /usr/bin/env ruby -w
 require File.join( File.dirname( __FILE__ ), "common" )
 
+<<<<<<< HEAD
 require "hello"
 
 app = Hello.new
@@ -12,3 +13,11 @@ options.each do |option|
 end
 app.build_name
 app.hello
+=======
+require 'hello'
+
+app = Hello.new
+app.prompt
+app.prompt_read
+app.hello
+>>>>>>> 9db31b2fe07bb3a1942625a9da9997f6e58827c4
