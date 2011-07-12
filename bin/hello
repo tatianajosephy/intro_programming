@@ -1,0 +1,14 @@
+#! /usr/bin/env ruby -w
+require File.join( File.dirname( __FILE__ ), "common" )
+
+require "hello"
+
+app = Hello.new
+
+options = ["first", "middle", "last", "suffix", "prefix"]
+options.each do |option|
+	app.prompt(option)
+	app.prompt_read(option)
+end
+app.build_name
+app.hello
